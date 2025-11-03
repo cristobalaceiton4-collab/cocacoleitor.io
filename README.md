@@ -1,134 +1,109 @@
-🥤 Coca-Cola - Página de Productos
-Una página web moderna y responsive que muestra los productos más populares de Coca-Cola con un carrito de compras funcional.
-🌐 Demo en Vivo
-🔗 Ver Página en Vivo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola | Las Más Compradas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header class="main-header">
+        <img src="images/logo cocacola.png" alt="Logo Coca-Cola" class="logo">
+        <button class="cart-button" aria-controls="cart-overlay">🛒 Carrito (0)</button>
+    </header>
 
-⚠️ Reemplaza TU-USUARIO y TU-REPO con tu información de GitHub
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section class="hero-section">
+            <h1 class="page-title">Destapa la Felicidad: Sabores que Amas</h1>
+            <p>Descubre nuestra selección de bebidas más populares.</p>
+        </section>
+        
+        <!-- GRID DE PRODUCTOS -->
+        <section class="products-grid">
+            <div class="product-card" data-name="Coca-Cola Original" data-price="1.50">
+                <div class="product-image-box">
+                    <img src="images/cocacola original.png" alt="Coca-Cola Original" class="product-image">
+                </div>
+                <h3 class="product-name">Coca-Cola Original</h3>
+                <p class="product-price">$1.50</p>
+                <button class="add-to-cart-btn">Añadir al Carrito</button>
+            </div>
 
-✨ Características
+            <div class="product-card" data-name="Coca-Cola Zero" data-price="1.60">
+                <div class="product-image-box">
+                    <img src="images/en_coca-cola_prod_zero_sugar__750x750_v1-removebg-preview.png" alt="Coca-Cola Zero" class="product-image">
+                </div>
+                <h3 class="product-name">Coca-Cola Zero</h3>
+                <p class="product-price">$1.60</p>
+                <button class="add-to-cart-btn">Añadir al Carrito</button>
+            </div>
+            
+            <div class="product-card" data-name="Fanta Naranja" data-price="1.40">
+                <div class="product-image-box product-fanta-bg">
+                    <img src="images/fanta 1.png" alt="Fanta Naranja" class="product-image">
+                </div>
+                <h3 class="product-name">Fanta Naranja</h3>
+                <p class="product-price">$1.40</p>
+                <button class="add-to-cart-btn">Añadir al Carrito</button>
+            </div>
 
-🛒 Carrito de Compras: Sistema funcional de carrito con agregar/eliminar productos
-📱 Diseño Responsive: Se adapta perfectamente a móviles, tablets y escritorio
-🎠 Carrusel de Noticias: Presenta productos Monster con navegación suave
-🎨 Animaciones Modernas: Efectos hover y transiciones fluidas
-⚡ Optimizado: Código limpio y bien estructurado
-♿ Accesible: Etiquetas ARIA y navegación con teclado
-
-🖼️ Capturas de Pantalla
-(Agrega capturas de pantalla aquí cuando tengas la página lista)
-🛠️ Tecnologías Utilizadas
-
-HTML5: Estructura semántica
-CSS3: Estilos modernos con Flexbox y Grid
-JavaScript (Vanilla): Funcionalidad sin frameworks
-Google Fonts: Tipografía Poppins
-
-📁 Estructura del Proyecto
-coca-cola-page/
-├── index.html          # Página principal
-├── style.css           # Estilos CSS
-├── script.js           # Lógica JavaScript
-├── images/             # Carpeta de imágenes
-│   ├── logo cocacola.png
-│   ├── cocacola_original.png
-│   ├── cocacola zero.png
-│   ├── fanta_naranja.png
-│   ├── cocacola light.png
-│   ├── MONSTER BLANCA.png
-│   ├── MONSTER MANGOLOCO.png
-│   └── MONSTER NORMAL.png
-└── README.md           # Este archivo
-🚀 Instalación Local
-
-Clonar el repositorio
-
-bashgit clone https://github.com/TU-USUARIO/TU-REPO.git
-
-Navegar a la carpeta
-
-bashcd TU-REPO
-
-Abrir en el navegador
-
-
-Simplemente abre index.html en tu navegador
-O usa Live Server en VS Code
-
-💻 Uso
-Carrito de Compras
-
-Click en "Añadir al Carrito" en cualquier producto
-El modal del carrito se abre automáticamente
-Puedes eliminar productos con el icono 🗑️
-Click en "Finalizar Compra" para completar
-
-Carrusel de Noticias
-
-Usa las flechas ← → para navegar
-También funciona con las teclas del teclado
-
-🎨 Personalización
-Cambiar Colores
-En style.css, busca estas variables:
-css/* Color principal de Coca-Cola */
-#e60000
-
-/* Color secundario (amarillo) */
-#ffcc00
-
-/* Color de hover */
-#ff3333
-Agregar Más Productos
-En index.html, duplica este bloque:
-html<div class="product-card" data-name="Nombre Producto" data-price="2.50">
-    <div class="product-image-box">
-        <img src="images/tu-imagen.png" alt="Tu Producto">
+            <div class="product-card" data-name="Coca-Cola Light" data-price="1.70">
+                <div class="product-image-box">
+                    <img src="images/1113038.png" alt="Coca-Cola Light" class="product-image">
+                </div>
+                <h3 class="product-name">Coca-Cola Light</h3>
+                <p class="product-price">$1.70</p>
+                <button class="add-to-cart-btn">Añadir al Carrito</button>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN DE NOTICIAS - CARRUSEL -->
+        <section class="news-section">
+            <h2 class="news-title-simple">MONSTERS</h2>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav prev-btn" aria-label="Anterior">❮</button>
+                
+                <div class="carousel-track">
+                    <div class="news-card current noticias-monster">
+                        <img src="images/monster verde1.jpeg" alt="Monster Ultra Zero" class="monster-large-image">
+                    </div>
+                    <div class="news-card noticias-monster">
+                        <img src="images/mangoloco 1.jpeg" alt="Monster Mango Loco" class="monster-large-image">
+                    </div>
+                    <div class="news-card noticias-monster">
+                        <img src="images/monster normal 2.jpeg" alt="Monster Normal" class="monster-large-image">
+                    </div>
+                </div>
+                
+                <button class="carousel-nav next-btn" aria-label="Siguiente">❯</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>&copy; 2025 Coca-Cola Fake Page. Diseñado con propósito.</p>
+        <div class="social-links">
+             <a href="#" aria-label="Facebook">Facebook</a> | 
+             <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+    </footer>
+    
+    <!-- MODAL DEL CARRITO -->
+    <div id="cart-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div id="cart-modal">
+            <h2 id="cart-title">🛒 Tu Carrito</h2>
+            <ul id="cart-items"></ul>
+            <p class="cart-total">Total: $0.00</p>
+            <button class="checkout-btn">Finalizar Compra</button>
+            <button class="close-cart-btn">Cerrar</button>
+        </div>
     </div>
-    <h3 class="product-name">Tu Producto</h3>
-    <p class="product-price">$2.50</p>
-    <button class="add-to-cart-btn">Añadir al Carrito</button>
-</div>
-📱 Responsive
-La página es completamente responsive en:
 
-📱 Móviles (< 480px)
-📱 Tablets (480px - 768px)
-💻 Desktop (> 768px)
-
-⚙️ Funcionalidades JavaScript
-
-✅ Gestión de carrito en memoria
-✅ Delegación de eventos para mejor rendimiento
-✅ Carrusel con transiciones suaves
-✅ Contador dinámico de productos
-✅ Cálculo automático de totales
-✅ Navegación con teclado
-
-🤝 Contribuciones
-Las contribuciones son bienvenidas. Para cambios importantes:
-
-Fork el proyecto
-Crea una rama (git checkout -b feature/nueva-caracteristica)
-Commit tus cambios (git commit -m 'Agregar nueva característica')
-Push a la rama (git push origin feature/nueva-caracteristica)
-Abre un Pull Request
-
-📄 Licencia
-Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
-👨‍💻 Autor
-Tu Nombre
-
-GitHub: @tu-usuario
-Email: tu-email@ejemplo.com
-
-🙏 Agradecimientos
-
-Diseño inspirado en la marca Coca-Cola
-Iconos: Emojis nativos
-Fuentes: Google Fonts (Poppins)
-
-📝 Notas
-⚠️ Este es un proyecto educativo/de práctica. No está afiliado con The Coca-Cola Company.
-
-⭐ Si te gustó este proyecto, dale una estrella en GitHub!
-Ver Demo | Reportar Bug | Solicitar Feature
+    <script src="script.js"></script>
+</body>
+</html>
